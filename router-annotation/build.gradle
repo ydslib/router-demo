@@ -1,9 +1,25 @@
 plugins {
     id 'java-library'
     id 'org.jetbrains.kotlin.jvm'
+    id 'maven-publish'
 }
+group = 'com.github.ydslib'
+version = '1.0.0'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_7
     targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+//                from components.release
+                groupId = 'com.github.ydslib'
+                artifactId = 'router-annotation'
+                version = '1.0.0'
+            }
+        }
+    }
 }
