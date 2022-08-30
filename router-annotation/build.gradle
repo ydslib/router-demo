@@ -4,7 +4,7 @@ plugins {
     id 'maven-publish'
 }
 group = 'com.github.ydslib'
-version = '1.0.0'
+version = '1.0.1'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_7
@@ -18,7 +18,7 @@ afterEvaluate {
 //                from components.release
                 groupId = 'com.github.ydslib'
                 artifactId = 'router-annotation'
-                version = '1.0.0'
+                version = '1.0.1'
             }
         }
     }
